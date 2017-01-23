@@ -11,5 +11,6 @@ RUN go get -u github.com/mattn/gom \
       && go get -u github.com/tcnksm/ghr
 
 COPY ./compile.sh /usr/bin/compile
+COPY ./release.sh /usr/bin/release
 
 
