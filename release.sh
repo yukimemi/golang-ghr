@@ -1,7 +1,9 @@
 #!/bin/sh
 
+VERSION=$(gobump show | jq -r '.[]')
+
 if [ -z $VERSION ]; then
-  echo "VERSION is not set ! Set VERSION env !"
+  echo "Can not get VERSION !"
   exit 1
 fi
 

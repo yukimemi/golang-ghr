@@ -1,9 +1,6 @@
 #!/bin/sh
 
-if [ -z $APPNAME ]; then
-  echo "APPNAME is not set ! Set APPNAME env !"
-  exit 1
-fi
+APPNAME=$(basename $PWD)
 
 for GOOS in darwin linux windows; do
   for GOARCH in 386 amd64; do
